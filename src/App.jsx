@@ -4,9 +4,7 @@ import EmployeeData from "./components/EmployeeData";
 import "./index.css";
 
 const App = () => {
-  const [employees, setEmployees] = useState([
-    { employeeName: "John", position: "Front-end Developer", department: "IT" },
-  ]);
+  const [employees, setEmployees] = useState([]);
 
   const addWorker = (employee) => {
     setEmployees([...employees, employee]);

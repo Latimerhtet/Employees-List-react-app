@@ -20,13 +20,14 @@ const EmployeeForm = (props) => {
   const addEmployee = (event) => {
     event.preventDefault();
     if (
-      !employee.employeeName == "" &&
-      !employee.position == "" &&
-      !employee.department == ""
+      !employee.employeeName.trim().length == 0 &&
+      !employee.position.trim().length == 0 &&
+      !employee.department.trim().length == 0
     ) {
       props.addWorker(employee);
+    } else {
+      window.confirm("You should fill all the fields in the form!");
     }
-
     setEmployee({ employeeName: "", position: "", department: "" });
   };
   return (
